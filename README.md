@@ -14,6 +14,13 @@ Actually, in my tic Tac toe game, you will play in a row against two AI.
     -Train the trained p1 against the trained p2
     -Train p1 and p2 against random player
     -Test p1 against random player
+**USAGE: **
+
+cmd: ./tic_tac_toe.py
+
+ENTER 'X Y' position when asked.
+At end of game, enter 'c' if you want to play against the same Ai.
+If you want to test the other Ai (scorep1) type anything else.
 
 
 ***Train p1 and p2 with random player***
