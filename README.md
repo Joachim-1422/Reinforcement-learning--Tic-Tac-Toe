@@ -1,7 +1,25 @@
+The goal of this project was to create a basic AI from reinforcement learning for the tic Tac toe game.
+
+I made this project because Reinforcement learning is something interesting me a lot and it was a good thing to begin with this kind of project.
+
+Actually in my tic tac toe game, you will play in a row against two AI.
+    "score" is only trained with 1 and -1 rewards if the AI win or lose.
+    "equality" is trained with 1 and -1 rewards and i've add a reward of 0.5 if there's an equality.
+
+**I kept the code that deserve me to train my AI (Avalaible below)
+    If you want to use it there is a list with all kind of train i've made.
+        -Train p1 and p2 with random player
+        -Train the trained p1 against the trained p2
+        -Train p1 and p2 against random player
+        -Test p1 against random player
+**
+
+
+
+***Train p1 and p2 with random player***
 ``` 
     x = trained_player1.eps
     y = trained_player2.eps
-    print('Train p1 and p2 with rand')
     for i in range(0, 70000):
         if i % 10 == 0:
             trained_player1.eps = x
@@ -25,9 +43,13 @@
             print("eps=%sp1 win rate=%s" % (trained_player2.eps, trained_player2.win_nb/100.))
             print()
         play(game, trained_player1, trained_player2)
+```
+
+***Train the trained p1 against the trained p2***
+
+```
     p1.eps = 0
     p2.eps = 0.99
-    print('train p1 trained against p2 trained')
     for _ in range(0, 100000):
         if _ % 50 == 0:
         if _ % 1000 == 0:
@@ -47,7 +69,10 @@
             continue
         else:
             break
-    print('train p1 and p2 against random player')
+```
+
+***Train p1 and p2 against random player***
+```
     for _ in range(0, 30000):
         if _ % 1000 == 0:
             p1.reset_stat()
@@ -60,9 +85,12 @@
             print("eps=%sp2 win rate=%s" % (p2.eps, p2.win_nb/100.))
         play(game, p1, random_player)
         play(game, p2, random_player)
+```
+
+***Test p1 against random player***
+```
     p1.reset_stat()
     p2.reset_stat()
-    print('test p1 against random player')
     for _ in range(0, 1000):
         play(game, p1, random_player, train=False)
     print("p1 win rate", p1.win_nb/1000.)
