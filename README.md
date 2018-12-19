@@ -2,18 +2,11 @@ The goal of this project was to create a basic AI from reinforcement learning fo
 
 I made this project because Reinforcement learning is something interesting me a lot and it was a good thing to begin with this kind of project.
 
-Actually in my tic tac toe game, you will play in a row against two AI.
+Actually, in my tic Tac toe game, you will play in a row against two AI. 
     "score" is only trained with 1 and -1 rewards if the AI win or lose.
-    "equality" is trained with 1 and -1 rewards and i've add a reward of 0.5 if there's an equality.
+    "equality" is trained with 1 and -1 rewards and I've added a reward of 0.5 if there's an equality.
 
-**I kept the code that deserve me to train my AI (Avalaible below)
-    If you want to use it there is a list with all kind of train i've made.
-        -Train p1 and p2 with random player
-        -Train the trained p1 against the trained p2
-        -Train p1 and p2 against random player
-        -Test p1 against random player
-**
-
+*I kept the code that deserves me to train my AI (available below) If you want to use it there is a list with all kinds of terrain I've made. -Train p1 and p2 with random player -Train the trained p1 against the trained p2 -Train p1 and p2 against random player -Test p1 against random player*
 
 
 ***Train p1 and p2 with random player***
